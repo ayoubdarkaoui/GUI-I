@@ -1,1 +1,2 @@
-# GUI-I Assignments
+Everything is in the gh pages branch
+
