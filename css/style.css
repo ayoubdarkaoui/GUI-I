@@ -1,10 +1,10 @@
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     background-color: #0f3b8b;
     background-image: url("../images/background.jpg");
     background-size: cover;
-    background-repeat: repeat;
+    background-repeat: no-repeat;  /* fixed the repeat value */
     color: #565656;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
@@ -28,7 +28,7 @@ a:hover {
     max-height: 1440px;
     display: grid;
     grid-template-rows: 70px 35px 2px 1fr 70px;
-    background-color: rgba(250, 250, 250, 0.98);
+    background-color: rgba(250, 250, 250, 0.98); /* semi-transparent background */
 }
 
 header h1 {
@@ -38,7 +38,7 @@ header h1 {
 
 /* navigation bar styles */
 nav {
-    margin: 0px;
+    margin: 0;
     padding-left: 6%;
     overflow: hidden;
 }
@@ -59,8 +59,8 @@ nav a:hover {
     overflow: hidden;
 }
 .dropdown .dropbtn {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     padding-right: 15px;
     border: none;
     outline: none;
@@ -94,7 +94,7 @@ nav a:hover {
 
 /* navbar underline */
 div.line {
-    margin: 0px 4%;
+    margin: 0 4%;
     height: 2px;
     width: 90%;
     background-color: #565656;
@@ -102,8 +102,8 @@ div.line {
 
 /* main content block */
 main {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
 }
 
