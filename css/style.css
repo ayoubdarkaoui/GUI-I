@@ -1,17 +1,17 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #ebeff7;
-    background-image: url("../images/chefchaouen_blue_pearl.jpg");
+    background-color: #0f3b8b;
+    background-image: url("../images/background.jpg");
     background-size: cover;
-    background-repeat: no-repeat;  /* fixed the repeat value */
-    color: #080707;
+    background-repeat: no-repeat;
+    color: #000000;  /* Changed text color to black */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
 }
 
 a {
-    color: #06355b;
+    color: #76323F;
     font-weight: bold;
     text-decoration: none;
 }
@@ -28,7 +28,7 @@ a:hover {
     max-height: 1440px;
     display: grid;
     grid-template-rows: 70px 35px 2px 1fr 70px;
-    background-color: rgba(250, 250, 250, 0.747); /* semi-transparent background */
+    background-color: rgba(250, 250, 250, 0.5); /* semi-transparent background */
 }
 
 header h1 {
@@ -45,7 +45,7 @@ nav {
 nav a {
     padding-right: 15px;
     float: left;
-    color: #09367b;
+    color: #76323F;
     font-size: large;
     font-weight: bold;
     text-decoration: none;
@@ -64,7 +64,7 @@ nav a:hover {
     padding-right: 15px;
     border: none;
     outline: none;
-    color: #0d3a74;
+    color: #76323F;
     background-color: inherit;
     font-family: inherit;
     font-size: large;
@@ -75,7 +75,7 @@ nav a:hover {
     position: absolute;
     border: 1px solid #565656;
     border-radius: 5px;
-    background-color: rgba(250, 250, 250, 0);
+    background-color: rgb(250, 250, 250);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
     z-index: 3;
@@ -110,6 +110,7 @@ main {
 article {
     margin: 20px 6% 10px 6%;
     overflow: hidden;
+    color: #000000;  /* Ensure article text is also black */
 }
 article p {
     line-height: 1.4em;
@@ -121,6 +122,7 @@ article img {
 
 footer {
     text-align: center;
+    color: #000000;  /* Ensure footer text is also black */
 }
 footer p {
     margin: 3px;
