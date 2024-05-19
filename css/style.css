@@ -1,11 +1,10 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: #D7CEC7;
+    background-color: #0f3b8b;
     background-image: url("../images/background.jpg");
-    <a href="http://www.freepik.com">Designed by pikisuperstar / Freepik</a>
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     color: #565656;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
