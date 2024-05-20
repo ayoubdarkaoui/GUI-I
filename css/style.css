@@ -13,7 +13,7 @@ updated by AD on May 17, 2024 at 7:23 PM
 body {
     margin: 0;
     padding: 0;
-    background-color: transparent;
+    background-color: rgba(64, 224, 208, 0.514);
     background-image: url("../images/Chefchaoun.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
