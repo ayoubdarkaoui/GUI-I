@@ -27,7 +27,7 @@ a {
     font-weight: bold;
 }
 a:hover {
-    color: rgb(6, 42, 42);
+    color: rgb(11, 238, 238);
 }
 
 /* setup grid layout for header, nav, main, and footer */
