@@ -1,19 +1,31 @@
+/***********************
+File: style.css
+GUI Assignment: Creating Your First Web Page
+Ayoub Darkaoui, UMass Lowell Computer Science Student, Ayoub_Darkaoui@student.uml.edu
+
+VSCode editor is ready to use.
+
+PART 2: First Web Page
+Copyright (c) 2024 by Ayoub Darkaoui. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by AD on May 17, 2024 at 7:23 PM
+*/
 body {
     margin: 0;
     padding: 0;
-    background-color: #0f3b8b;
+    background-color: transparent;
     background-image: url("../images/Chefchaoun.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    color: #000000;  /* Changed text color to black */
+    color: #000000;  
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
 }
 
 a {
-    color: #171112;
+    color: rgba(5, 78, 115, 0.471);
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: underline;
 }
 a:hover {
     text-decoration: underline;
@@ -121,9 +133,13 @@ article img {
 }
 
 footer {
+    position: fixed;
     text-align: center;
     color: #000000;  /* Ensure footer text is also black */
-    margin-top: -30px;
+    bottom: 0 ;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0;
 }
 footer p {
     margin: 5px;
