@@ -37,7 +37,7 @@ a:hover {
     width: 70%;
     min-width: 768px;
     min-height: 720px;
-    max-height: 1440px;
+    max-height: 1200px;
     display: grid;
     grid-template-rows: 70px 35px 2px 1fr 70px;
     background-color: transparent; /* transparent background */
@@ -76,8 +76,8 @@ nav a:hover {
     padding-right: 15px;
     border: none;
     outline: none;
-    color: #ab9999;
-    background-color: inherit;
+    color: #f1e7e7;
+    background-color: transparent;
     font-family: inherit;
     font-size: large;
     font-weight: bold;
@@ -85,11 +85,11 @@ nav a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    border: 1px solid #f6f6f6;
+    border: 1px solid #f6f6f65f;
     border-radius: 5px;
-    background-color: rgb(245, 239, 239);
+    background-color: transparent;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgb(243, 240, 240);
+    box-shadow: transparent;
     z-index: 3;
 }
 .dropdown-content a {
@@ -107,8 +107,8 @@ nav a:hover {
 /* navbar underline */
 div.line {
     margin: 0 4%;
-    height: 2px;
-    width: 90%;
+    height: 4px;
+    width: 95%;
     background-color: #f6f1f1d5;
 }
 
