@@ -1,6 +1,6 @@
 /***********************
 File: style.css
-GUI Assignment: Creating Your First Web Page
+GUI Assignment: Creating my First Web Page
 Ayoub Darkaoui, UMass Lowell Computer Science Student, Ayoub_Darkaoui@student.uml.edu
 
 VSCode editor is ready to use.
@@ -23,11 +23,11 @@ body {
 }
 
 a {
-    color: rgb(152, 145, 145);
+    color: rgb(5, 5, 5);
     font-weight: bold;
 }
 a:hover {
-    color: aqua;
+    color: rgb(6, 72, 72);
 }
 
 /* setup grid layout for header, nav, main, and footer */
@@ -86,9 +86,9 @@ nav a:hover {
     position: absolute;
     border: 1px solid #f6f6f65f;
     border-radius: 5px;
-    background-color: aqua;
+    background-color: rgb(19, 125, 125);
     min-width: 160px;
-    box-shadow: 2px 2px 2px 1px white;
+    box-shadow: 2px 2px 2px 1px rgb(13, 12, 12);
     z-index: 3;
 }
 .dropdown-content a {
