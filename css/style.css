@@ -88,7 +88,7 @@ nav a:hover {
     border-radius: 5px;
     background-color: aqua;
     min-width: 160px;
-    box-shadow: white;
+    box-shadow: 2px 2px 2px 1px white;
     z-index: 3;
 }
 .dropdown-content a {
