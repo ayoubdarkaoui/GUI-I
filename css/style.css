@@ -23,11 +23,11 @@ body {
 }
 
 a {
-    color: navy;
+    color: rgb(117, 109, 109);
     font-weight: bold;
-    text-decoration: underline;
 }
 a:hover {
+    color: aqua;
     text-decoration: underline;
 }
 
@@ -77,7 +77,7 @@ nav a:hover {
     border: none;
     outline: none;
     color: #f1e7e7;
-    background-color: transparent;
+    background-color: blue;
     font-family: inherit;
     font-size: large;
     font-weight: bold;
