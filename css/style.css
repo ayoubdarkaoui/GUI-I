@@ -23,9 +23,9 @@ body {
 }
 
 a {
-    color: #f5f0f1;
+    color: navy;
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: underline;
 }
 a:hover {
     text-decoration: underline;
