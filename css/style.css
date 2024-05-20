@@ -13,17 +13,17 @@ updated by AD on May 17, 2024 at 7:23 PM
 body {
     margin: 0;
     padding: 0;
-    background-color: rgba(64, 224, 208, 0.514);
-    background-image: url("../images/Chefchaoun.jpeg");
+    background-color: transparent;
+    background-image: url("../images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    color: #000000;
+    color: #f3ebeb;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
 }
 
 a {
-    color: #171112;
+    color: #f5f0f1;
     font-weight: bold;
     text-decoration: none;
 }
@@ -57,7 +57,7 @@ nav {
 nav a {
     padding-right: 15px;
     float: right;
-    color: #000104;
+    color: #e7e9ee;
     font-size: large;
     font-weight: bold;
     text-decoration: none;
@@ -85,18 +85,18 @@ nav a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    border: 1px solid #23202065;
+    border: 1px solid #f6f6f6;
     border-radius: 5px;
-    background-color: rgba(13, 13, 13, 0);
+    background-color: rgb(245, 239, 239);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(72, 68, 68, 0.463);
+    box-shadow: 0px 8px 16px 0px rgb(243, 240, 240);
     z-index: 3;
 }
 .dropdown-content a {
     padding: 3px 16px;
     float: none;
     display: block;
-    color: #0bdfef7c;
+    color: #ebf2f3;
     text-decoration: none;
     text-align: left;
 }
@@ -122,7 +122,7 @@ main {
 article {
     margin: 20px 6% 10px 6%;
     overflow: hidden;
-    color: #000000;  
+    color: #fffdfd;  
 }
 article p {
     line-height: 1.4em;
@@ -134,7 +134,7 @@ article img {
 
 footer {
     text-align: center;
-    color: #000000;  
+    color: #f6eeee;  
     margin-top: -30px;
 }
 footer p {
