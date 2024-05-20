@@ -132,8 +132,8 @@ article img {
 }
 
 footer {
-    text-align: right; 
-    margin-top: 5
+    text-align: center; 
+    margin-top: -10
 }
 footer p {
     margin: 5px;
