@@ -123,6 +123,7 @@ article img {
 footer {
     text-align: center;
     color: #000000;  /* Ensure footer text is also black */
+    margin-top: -20px;
 }
 footer p {
     margin: 5px;
