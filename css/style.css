@@ -40,7 +40,7 @@ a:hover {
     max-height: 1440px;
     display: grid;
     grid-template-rows: 70px 35px 2px 1fr 70px;
-    background-color: rgba(250, 250, 250, 0.982); /* semi-transparent background */
+    background-color: transparent; /* semi-transparent background */
 }
 
 header h1 {
