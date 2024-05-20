@@ -132,7 +132,7 @@ article img {
 }
 
 footer {
-    text-align: center; 
+    text-align: right; 
     margin-top: 5
 }
 footer p {
@@ -140,5 +140,5 @@ footer p {
 }
 footer span {
     margin: 1px;
-    line-height: 25px;
+    line-height: 16px;
 }
