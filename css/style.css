@@ -28,7 +28,7 @@ a:hover {
     max-height: 1440px;
     display: grid;
     grid-template-rows: 70px 35px 2px 1fr 70px;
-    background-color: rgba(250, 250, 250, 0.5); /* semi-transparent background */
+    background-color: rgba(250, 250, 250, 0.983); /* semi-transparent background */
 }
 
 header h1 {
@@ -45,7 +45,7 @@ nav {
 nav a {
     padding-right: 15px;
     float: left;
-    color: #76323F;
+    color: #000104;
     font-size: large;
     font-weight: bold;
     text-decoration: none;
@@ -64,7 +64,7 @@ nav a:hover {
     padding-right: 15px;
     border: none;
     outline: none;
-    color: #76323F;
+    color: #0b0707;
     background-color: inherit;
     font-family: inherit;
     font-size: large;
@@ -75,7 +75,7 @@ nav a:hover {
     position: absolute;
     border: 1px solid #565656;
     border-radius: 5px;
-    background-color: rgb(250, 250, 250);
+    background-color: rgba(250, 250, 250, 0.429);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
     z-index: 3;
@@ -125,7 +125,7 @@ footer {
     color: #000000;  /* Ensure footer text is also black */
 }
 footer p {
-    margin: 3px;
+    margin: 5px;
 }
 footer span {
     margin: 1px;
