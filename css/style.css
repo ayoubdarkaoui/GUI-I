@@ -13,11 +13,11 @@ updated by AD on May 17, 2024 at 7:23 PM
 body {
     margin: 0;
     padding: 0;
-    background-color: #0f3b8b;
+    background-color: transparent;
     background-image: url("../images/Chefchaoun.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    color: #000000;  /* Changed text color to black */
+    color: #000000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
 }
@@ -56,7 +56,7 @@ nav {
 }
 nav a {
     padding-right: 15px;
-    float: left;
+    float: right;
     color: #000104;
     font-size: large;
     font-weight: bold;
@@ -67,7 +67,7 @@ nav a:hover {
 }
 /* dropdown menu */
 .dropdown {
-    float: left;
+    float: right;
     overflow: hidden;
 }
 .dropdown .dropbtn {
@@ -76,7 +76,7 @@ nav a:hover {
     padding-right: 15px;
     border: none;
     outline: none;
-    color: #0b0707;
+    color: #ab9999;
     background-color: inherit;
     font-family: inherit;
     font-size: large;
@@ -85,18 +85,18 @@ nav a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    border: 1px solid #232020;
+    border: 1px solid #23202065;
     border-radius: 5px;
-    background-color: rgba(13, 13, 13, 0.429);
+    background-color: rgba(13, 13, 13, 0);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 8px 16px 0px rgba(72, 68, 68, 0.463);
     z-index: 3;
 }
 .dropdown-content a {
     padding: 3px 16px;
     float: none;
     display: block;
-    color: #141212;
+    color: #0bdfef7c;
     text-decoration: none;
     text-align: left;
 }
@@ -109,7 +109,7 @@ div.line {
     margin: 0 4%;
     height: 2px;
     width: 90%;
-    background-color: #070707;
+    background-color: #f6f1f1d5;
 }
 
 /* main content block */
@@ -122,7 +122,7 @@ main {
 article {
     margin: 20px 6% 10px 6%;
     overflow: hidden;
-    color: #000000;  /* Ensure article text is also black */
+    color: #000000;  
 }
 article p {
     line-height: 1.4em;
@@ -134,7 +134,7 @@ article img {
 
 footer {
     text-align: center;
-    color: #000000;  /* Ensure footer text is also black */
+    color: #000000;  
     margin-top: -30px;
 }
 footer p {
