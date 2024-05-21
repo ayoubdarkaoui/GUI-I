@@ -30,21 +30,10 @@ a:hover {
     color: rgb(11, 238, 238);
 }
 
-/* setup grid layout for header, nav, main, and footer 
-wrapper {
-    margin: auto;
-    width: 70%;
-    min-width: 768px;
-    min-height: 720px;
-    max-height: 1200px;
-    display: grid;
-    grid-template-rows: 70px 35px 2px 1fr 70px;
-    background-color: transparent; /* transparent background 
-}*/
-
 header h1 {
     margin: 10px 6% 0px 6%;
     line-height: 60px;
+    text-align: center;
 }
 
 /* navigation bar styles */
@@ -107,7 +96,7 @@ nav a:hover {
 div.line {
     margin: 0 4%;
     height: 4px;
-    width: 95%;
+    width: 100%;
     background-color: #f6f1f1d5;
 }
 
