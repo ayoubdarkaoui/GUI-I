@@ -6,10 +6,10 @@
 [Link to the web page](https://ayoubdarkaoui.github.io/GUI-I/)
 
 ## Assignment 1 Details: 
-1. Creating my first web page. - [x] 
-2. Adding some styling on a seperate css folder and file. - [x] 
-3. Adding web pages icons, and embedding an image to a page. - [x] 
-4. Including links to my GitHub and other useful resources. - [x] 
+1. Creating my first web page. 
+2. Adding some styling on a seperate css folder and file. 
+3. Adding web pages icons, and embedding an image to a page. 
+4. Including links to my GitHub and other useful resources. 
 5. publishing the Web pages to my GitHub Repository that I 
-   called *GUI-I* . - [x] 
-6. Reading the supporting materials and summerizing them in a seperate textfile. - [x] 
+   called *GUI-I* .  
+6. Reading the supporting materials and summerizing them in a seperate textfile. 
