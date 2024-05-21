@@ -125,8 +125,12 @@ article img {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     text-align: center; 
     margin-top:0;
+    padding: 10px 0;
 }
 footer p {
     margin: 5px;
