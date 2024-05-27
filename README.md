@@ -1,6 +1,7 @@
 # GUI Assignments
 
-**This is my first website page ever, so I am a little bit explorative with the features and the design to make a good-looking web page. Please excuse any limitaions on this assignment.**
+**This is my first website page ever, so I am a little bit explorative with the features and 
+the design to make a good-looking web page. Please excuse any limitaions on this assignment.**
 
 ## My page: 
 [Link to the web page](https://ayoubdarkaoui.github.io/GUI-I/)
@@ -19,5 +20,7 @@
 
 1. Styling a given page (index.html) using external CSS file (pacific.css).
 2. fulfilling the overal requirements of page size, background, and colors.
-3. Attempting to add very nuanced features such as gradient navigaton side color. 
+3. Attempting to add very nuanced features such as gradient navigaton side color.
+Note: you can also access this assignment page from the main web page, because
+I added a navigation bar to access the completed assignments.   
    
