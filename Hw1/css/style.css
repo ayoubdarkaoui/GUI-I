@@ -1,0 +1,141 @@
+/***********************
+File: style.css
+GUI Assignment: Creating my First Web Page
+Ayoub Darkaoui, UMass Lowell Computer Science Student, Ayoub_Darkaoui@student.uml.edu
+
+VSCode editor is ready to use.
+
+PART 2: First Web Page
+Copyright (c) 2024 by Ayoub Darkaoui. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by AD on May 17, 2024 at 7:23 PM
+*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #f3ebeb;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+a {
+    color: rgb(10, 161, 175);
+    font-weight: bold;
+}
+a:hover {
+    color: rgb(11, 238, 238);
+}
+
+header h1 {
+    margin: 10px 6% 0px 6%;
+    line-height: 60px;
+    text-align: center;
+}
+
+/* navigation bar styles */
+nav {
+    margin: 0;
+    padding-left: 6%;
+    overflow: hidden;
+}
+nav a {
+    padding-right: 15px;
+    float: right;
+    color: #e7e9ee;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+/* dropdown menu */
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+    margin: 0;
+    padding: 0;
+    padding-right: 15px;
+    border: none;
+    outline: none;
+    color: #f1e7e7;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: large;
+    font-weight: bold;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border: 1px solid #f6f6f65f;
+    border-radius: 5px;
+    background-color: rgb(19, 125, 125);
+    min-width: 160px;
+    box-shadow: 2px 2px 2px 1px rgb(13, 12, 12);
+    z-index: 3;
+}
+.dropdown-content a {
+    padding: 3px 16px;
+    float: none;
+    display: block;
+    color: #ebf2f3;
+    text-decoration: none;
+    text-align: left;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* navbar underline */
+div.line {
+    margin: 0 4%;
+    height: 4px;
+    width: 95%;
+    background-color: #f6f1f1d5;
+}
+
+/* main content block */
+main {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+article {
+    margin: 20px 6% 10px 6%;
+    overflow: hidden;
+    color: #fffdfd;  
+}
+article p {
+    line-height: 1.4em;
+}
+article img {
+    height: auto;
+    max-width: 100%;
+}
+/* Putting the GitHub Card in the center*/
+.center_text_images {
+    text-align: center;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
+    margin-top:0;
+    padding: 10px 0;
+}
+footer p {
+    margin: 5px;
+}
+footer span {
+    margin: 1px;
+    line-height: 16px;
+}
