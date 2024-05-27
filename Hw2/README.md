@@ -10,7 +10,7 @@ https://ayoubdarkaoui.github.io/GUI-I/Hw2/index.html
 
 1. Styling a given page (index.html) using external CSS file (pacific.css).
 2. fulfilling the overal requirements of page size, background, and colors.
-3. Attempting to add very nuanced features such as gradient navigaton side color.
+3. Attempting to add some very nuanced features such as gradient navigaton side color.
 
 ### Note: 
 
