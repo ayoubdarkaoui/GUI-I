@@ -7,6 +7,8 @@ Copyright (c) 2024 by Ayoub Darkaoui. All rights reserved. May be freely copied 
 excerpted for educational purposes with credit to the author.
 updated by AD on May 27, 2024 at 7:23 PM
 */
+
+
 /* Ensure HTML5 elements are styled as block elements */
 header, hgroup, nav, footer, figure, figcaption, aside, section, article {
     display: block;
@@ -52,7 +54,7 @@ nav {
     width: 200px;
     height: 100%;
     grid-row: 2 / 4;
-    background: linear-gradient(to bottom, #62acf6, #79b6f4); /* Attempting to set a subtle gradient */
+    background: linear-gradient(to bottom, #3b98f6, #79b6f4); /* Attempting to set a subtle gradient */
 }
 
 nav ul {
@@ -106,6 +108,7 @@ h1 {
 
 h2 {
     color: #3399CC; /* h2 Color */
+    font-weight: bold;
 }
 
 h1, h2 {
