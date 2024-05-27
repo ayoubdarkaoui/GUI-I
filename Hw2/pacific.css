@@ -1,0 +1,128 @@
+/***********************
+File: pacific.css
+GUI Assignment: Styling a website using External CSS file. 
+Ayoub Darkaoui, UMass Lowell Computer Science Student, Ayoub_Darkaoui@student.uml.edu
+
+Copyright (c) 2024 by Ayoub Darkaoui. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by AD on May 27, 2024 at 7:23 PM
+*/
+/* Ensure HTML5 elements are styled as block elements */
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+    display: block;
+}
+
+/* Setup the gradient background and general website theme */
+body {
+	/* I have been struggling with the margin top, as the website did not have top margin.
+		I realized I should add margin-top*/
+    margin-top: 10px; /* Top border margin of 10px */
+    background-color: #00569f;
+    background-image: url("./ptrbackground.jpg");
+    background-size: 100% 300px; /* Adjust size to fit the gradient height */
+    background-repeat: no-repeat;
+    background-position: top;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Wrapper contains all of the content for the page, centered on the page and using a grid layout */
+#wrapper {
+    margin: auto;
+    width: 80%;/* The 'main' area of the page is 80% of the page width */
+    min-height: 500px;
+    min-width: 600px;/* 600px minimum of the page */ 
+    display: grid;
+    grid-template-columns: 200px 1fr; /* Fixed width navigation with variable content area */
+    grid-template-rows: 72px 1fr 72px;
+    background-color: #FFFFFF;
+}
+
+/* Header contains the title banner for the webpage */
+header {
+    grid-column: 1 / span 2;
+    background-color: #000033;
+    background-image: url("./sunset.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+/* Navigation sidebar with a fixed width of 200px */
+nav {
+    width: 200px;
+    height: 100%;
+    grid-row: 2 / 4;
+    background: linear-gradient(to bottom, #62acf6, #79b6f4); /* Attempting to set a subtle gradient */
+}
+
+nav ul {
+    padding: 5px 25px;
+    list-style: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+nav a {
+    color: #000033;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: #344873;
+}
+
+nav a:hover {
+    color: #FFFFFF;
+}
+
+/* Main content for the webpage, size varies with the viewport */
+#content {
+    margin: 0px;
+    padding: 0px 25px;
+    grid-row: 2;
+}
+
+#content > img {
+    margin: 0px 30px 15px 0px;
+    float: left;
+    width: auto;
+}
+
+#content > p, #content > ul {
+    list-style-image: url("./marker.gif");
+}
+
+.resort{ /* class = "Resort" gets special styling */
+    color: #3399CC;
+    font-weight: bold;
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding: 10px;
+	color:#FFFFFF;/* h1 color */
+}
+
+h2 {
+    color: #3399CC; /* h2 Color */
+}
+
+h1, h2 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+#contact {
+    font-size: 90%;
+}
+
+
+/* Copyright info at the bottom of the content wrapper */
+footer {
+    margin: 15px;
+    grid-column: 2;
+    grid-row: 3;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: small;
+    font-style: italic;
+}
