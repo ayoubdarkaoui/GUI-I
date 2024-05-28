@@ -21,7 +21,7 @@ body {
     margin-top: 10px; /* Top border margin of 10px */
     background-color: #00569f;
     background-image: url("./ptrbackground.jpg");
-    background-size: 100% 300px; /* Adjust size to fit the gradient height */
+    background-size: 100% 300px;
     background-repeat: no-repeat;
     background-position: top;
     color: #666666;
@@ -94,7 +94,8 @@ nav a:hover {
     list-style-image: url("./marker.gif");
 }
 
-.resort{ /* class = "Resort" gets special styling */
+/* class Resort gets special styling */
+.resort{ 
     color: #3399CC;
     font-weight: bold;
 }
@@ -120,7 +121,6 @@ h1, h2 {
 }
 
 
-/* Copyright info at the bottom of the content wrapper */
 footer {
     margin: 15px;
     grid-column: 2;
