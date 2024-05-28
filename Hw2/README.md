@@ -10,6 +10,7 @@ https://ayoubdarkaoui.github.io/GUI-I/Hw2/index.html
 1. Styling a given page (index.html) using external CSS file (pacific.css).
 2. fulfilling the overal requirements of page size, background, and colors.
 3. Attempting to add some very nuanced features such as gradient navigaton side color.
+4. I validated the css file through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https://ayoubdarkaoui.github.io/GUI-I/Hw2/pacific.css) and there were NO ERRORS found. 
 
 ### Note: 
 
