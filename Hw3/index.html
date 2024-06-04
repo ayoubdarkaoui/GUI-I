@@ -10,84 +10,75 @@ updated by AD on June 3, 2024 at 9:23 PM
 -->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GUI Programming I" />
-    <meta name="author" content="Ayoub Darkaoui" />
+    <meta name="description" content="GUI Programming I"/>
+    <meta name="author" content="Ayoub Darkaoui"/>
     <title>Multiplicator Table</title>
-    <link href="../css/style.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
-
-  
-</head>
-
-<body>
+  </head>
+  <body>
     <div id="wrapper">
-        <!-- website header title -->
-        <header>
-            <h1>GUI Programming I</h1>
-        </header>
-
-
-        <div class="line"></div>
-
-        <!-- main container for webpage content -->
-        <main>
-            <article>
-                <h2>Multiplicator Table</h2>
-                <!-- get user input to generate the multiplication table -->
-                <fieldset>
-                    <legend>Please enter table ranges [-50 to 50]</legend>
-                    <form action="#" method="GET">
-                        <label for="minXVal">Starting column value:</label>
-                        <input type="number" id="minXVal" value="1" min="-50"
-                            max="50" />
-                        <br />
-                        <label for="maxXVal">Ending column value:</label>
-                        <input type="number" id="maxXVal" value="10" min="-50"
-                            max="50" />
-                        <br />
-                        <label for="minYVal">Starting row value:</label>
-                        <input type="number" id="minYVal" value="1" min="-50"
-                            max="50" />
-                        <br />
-                        <label for="maxYVal">Ending row value:</label>
-                        <input type="number" id="maxYVal" value="10" min="-50"
-                            max="50" />
-                        <input type="button" id="generateButton"
-                            value="Generate Table" />
-                        <div id="info"></div>
-                    </form>
-                </fieldset>
-                <div id="table">
-                    <!-- table is generated here -->
-                </div>
-            </article>
-        </main>
-
-        <footer>
-            <!-- Copyright information -->
-            <span>Copyright &copy; 2024 Ayoub Darkaoui</span><br/>
-            <a href="http://www.freepik.com">Background Designed by pikisuperstar / Freepik</a>
-            <p>
-                <a href="http://validator.w3.org/check?uri=https://ayoubdarkaoui.github.io/GUI-I/">
-                    <img class="img-square" src="../images/HTML5_Logo.png" style="height: 40px" alt="HTML5 Logo">
-                    Valid HTML5
-                </a>
-                &nbsp;&nbsp;
-                <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://ayoubdarkaoui.github.io/GUI-I/">
-                    <img class="img-square" src="../images/CSS3_Logo.png" style="height: 40px" alt="CSS3 Logo">
-                    Valid CSS3
-                </a>
-            </p>
-
-        </footer>
+      <!-- website header title -->
+      <header>
+        <h1>GUI Programming I</h1>
+      </header>
+      <!-- navigation bar -->
+      <nav>
+        <a href="index.html">About</a>
+        <div class="dropdown">
+          <button class="dropbtn">Homework</button>
+          <div class="dropdown-content">
+            <a href="./Hw1/hw1.html">Homework 1</a>
+            <a href="./Hw2/index.html">Homework 2</a>
+            <a href="./Hw3/index.html">Homework 3</a>
+          </div>
+        </div>
+      </nav>
+      <div class="line"></div>
+      <!-- main container for webpage content -->
+      <main>
+        <article>
+          <h2>Multiplicator Table</h2>
+          <!-- get user input to generate the multiplication table -->
+          <fieldset>
+            <legend>Please enter table ranges [between -50 and 50]</legend>
+            <form id="tableForm" action="#" method="GET">
+              <label for="minXVal">Starting column value:</label>
+              <input type="number" id="minXVal" value="1" min="-50" max="50"/>
+              <br/>
+              <label for="maxXVal">Ending column value:</label>
+              <input type="number" id="maxXVal" value="10" min="-50" max="50"/>
+              <br/>
+              <label for="minYVal">Starting row value:</label>
+              <input type="number" id="minYVal" value="1" min="-50" max="50" />
+              <br/>
+              <label for="maxYVal">Ending row value:</label>
+              <input type="number" id="maxYVal" value="10" min="-50" max="50"/>
+              <input type="submit" id="generateButton" value="Generate Table"/>
+              <div id="info"></div>
+            </form>
+          </fieldset>
+          <div id="table">
+            <!-- table is generated here -->
+          </div>
+        </article>
+      </main>
+      <footer>
+        <!-- Copyright information -->
+        <span>Copyright &copy; 2024 Ayoub Darkaoui</span>
+        <br />
+        <p>
+          <a href="http://validator.w3.org/check?uri=https://ayoubdarkaoui.github.io/GUI-I/Hw3/">
+            <img class="img-square" src="../images/HTML5_Logo.png" style="height: 40px" alt="HTML5 Logo"> Valid HTML5 </a> &nbsp;&nbsp; 
+          <a href="https://jigsaw.w3.org/css -validator/validator?uri=https://ayoubdarkaoui.github.io/GUI-I/">
+            <img class="img-square" src="../images/CSS3_Logo.png" style="height:40px" alt="CSS3 Logo"> Valid CSS3 </a>
+        </p>
+      </footer>
     </div>
     <!-- javascript linked at the bottom of the body element -->
     <script src="dynamic_table.js"></script>
-</body>
-
+  </body>
 </html>
