@@ -7,6 +7,8 @@ Copyright (c) 2024 by Ayoub Darkaoui. All rights reserved. May be freely copied 
 excerpted for educational purposes with credit to the author.
 updated by AD on June 3, 2024 at 9:23 PM
 */
+
+
 // store HTML elements as variables
 var generateButton = document.getElementById("generateButton");
 var infoMsg = document.getElementById("info");
