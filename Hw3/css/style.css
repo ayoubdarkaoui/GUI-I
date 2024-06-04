@@ -3,17 +3,17 @@ File: style.css
 GUI Assignment: Creating my First Web Page
 Ayoub Darkaoui, UMass Lowell Computer Science Student, Ayoub_Darkaoui@student.uml.edu
 
+VSCode editor is ready to use.
 
 PART 2: First Web Page
 Copyright (c) 2024 by Ayoub Darkaoui. All rights reserved. May be freely copied or
 excerpted for educational purposes with credit to the author.
 updated by AD on May 17, 2024 at 7:23 PM
 */
-
 body {
     margin: 0;
     padding: 0;
-    background-color: transparent;
+    background-color: black;
     background-image: url("../images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
