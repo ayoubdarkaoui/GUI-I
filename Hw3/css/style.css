@@ -1,14 +1,11 @@
 /***********************
-File: style.css
-GUI Assignment: Creating my First Web Page
+Assignment 3 File: style.css
+Assignment 3 Details: Creating an intractive table using JavaScript
 Ayoub Darkaoui, UMass Lowell Computer Science Student, Ayoub_Darkaoui@student.uml.edu
 
-VSCode editor is ready to use.
-
-PART 2: First Web Page
 Copyright (c) 2024 by Ayoub Darkaoui. All rights reserved. May be freely copied or
 excerpted for educational purposes with credit to the author.
-updated by AD on May 17, 2024 at 7:23 PM
+updated by AD on June 3, 2024 at 9:23 PM
 */
 body {
     margin: 0;
@@ -182,10 +179,16 @@ input[type="submit"]:hover {
 }
 
 /* Styles for the multiplication table */
+#table {
+    width: 100%;
+    overflow: auto;
+    margin-top: 20px;
+    position: relative;
+}
+
 #table table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
 }
 
 #table th,
@@ -195,11 +198,24 @@ input[type="submit"]:hover {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
     color: #f3ebeb;
+    position: relative;
 }
 
 #table th {
     background-color: #0aa1af; /* Blue background for starting values */
     color: #fff; /* White text */
+}
+
+#table th:first-child,
+#table td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #0aa1af;
+}
+
+#table th {
+    position: sticky;
+    top: 0;
 }
 
 #info {
