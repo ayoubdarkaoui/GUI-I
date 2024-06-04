@@ -13,7 +13,6 @@ updated by AD on May 17, 2024 at 7:23 PM
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
     background-image: url("../images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -34,6 +33,9 @@ header h1 {
     margin: 10px 6% 0px 6%;
     line-height: 60px;
     text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+    padding: 10px;
+    border-radius: 10px;
 }
 
 /* navigation bar styles */
@@ -41,6 +43,9 @@ nav {
     margin: 0;
     padding-left: 6%;
     overflow: hidden;
+    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+    padding: 10px;
+    border-radius: 10px;
 }
 nav a {
     padding-right: 15px;
@@ -110,7 +115,10 @@ main {
 article {
     margin: 20px 6% 10px 6%;
     overflow: hidden;
-    color: #fffdfd;  
+    color: #fffdfd;
+    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
 }
 article p {
     line-height: 1.4em;
@@ -128,9 +136,10 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    text-align: center; 
-    margin-top:0;
+    text-align: center;
+    margin-top: 0;
     padding: 10px 0;
+    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
 }
 footer p {
     margin: 5px;
@@ -146,6 +155,7 @@ fieldset {
     border-radius: 10px;
     padding: 20px;
     margin: 20px 0;
+    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
 }
 
 legend {
@@ -165,6 +175,8 @@ input[type="number"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Make input background semi-transparent */
+    color: #000; /* Change input text color for better visibility */
 }
 
 input[type="button"],
@@ -189,6 +201,7 @@ input[type="submit"]:hover {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
 }
 
 #table th,
@@ -196,7 +209,7 @@ input[type="submit"]:hover {
     border: 1px solid #fff;
     padding: 10px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     color: #f3ebeb;
 }
 
