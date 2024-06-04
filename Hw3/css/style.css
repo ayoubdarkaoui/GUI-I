@@ -9,10 +9,12 @@ Copyright (c) 2024 by Ayoub Darkaoui. All rights reserved. May be freely copied 
 excerpted for educational purposes with credit to the author.
 updated by AD on May 17, 2024 at 7:23 PM
 */
+
 body {
     margin: 0;
     padding: 0;
     background-color: transparent;
+    background-image: url("../images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     color: #f3ebeb;
