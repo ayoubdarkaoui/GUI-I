@@ -13,7 +13,7 @@ updated by AD on May 17, 2024 at 7:23 PM
 body {
     margin: 0;
     padding: 0;
-    background-image: url("../images/background.jpg");
+    background-image: url("/images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     color: #f3ebeb;
