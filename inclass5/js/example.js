@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+
     // Step 1: Add new item "cream" to end of list
     const list = document.querySelector('ul');
     const newItemEnd = document.createElement('li');
@@ -20,5 +20,5 @@ document.addEventListener("DOMContentLoaded", function() {
     const span = document.createElement('span');
     span.textContent = `${itemCount}`;
     heading.appendChild(span);
-  });
+  
   
