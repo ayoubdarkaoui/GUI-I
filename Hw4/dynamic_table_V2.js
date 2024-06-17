@@ -2,27 +2,25 @@ $(document).ready(function() {
     var tabCounter = 1;
     var tabs = $("#tabs").tabs();
 
-    // Initialize sliders and sync with input fields
-    function initializeSlider(slider, input) {
+    // Initialize sliders and sync with hidden input fields
+    function initializeSlider(slider, input, defaultValue) {
         slider.slider({
             range: "min",
             min: -50,
             max: 50,
-            value: input.val(),
+            value: defaultValue,
             slide: function(event, ui) {
                 input.val(ui.value);
                 input.trigger("change");
             }
         });
-        input.on("change", function() {
-            slider.slider("value", this.value);
-        });
+        input.val(defaultValue); // Set initial value
     }
 
-    initializeSlider($("#minXSlider"), $("#minXVal"));
-    initializeSlider($("#maxXSlider"), $("#maxXVal"));
-    initializeSlider($("#minYSlider"), $("#minYVal"));
-    initializeSlider($("#maxYSlider"), $("#maxYVal"));
+    initializeSlider($("#minXSlider"), $("#minXVal"), 1);
+    initializeSlider($("#maxXSlider"), $("#maxXVal"), 10);
+    initializeSlider($("#minYSlider"), $("#minYVal"), 1);
+    initializeSlider($("#maxYSlider"), $("#maxYVal"), 10);
 
     // Form validation
     $("#tableForm").validate({
@@ -95,10 +93,11 @@ $(document).ready(function() {
             tabs.tabs("refresh");
         });
 
-        // Reset form and sliders
-        $('#tableForm')[0].reset();
-        $("#minXSlider, #maxXSlider, #minYSlider, #maxYSlider").slider("value", 1);
-        $("#minXVal, #maxXVal, #minYVal, #maxYVal").val(1);
+        // Reset sliders
+        $("#minXSlider").slider("value", 1);
+        $("#maxXSlider").slider("value", 10);
+        $("#minYSlider").slider("value", 1);
+        $("#maxYSlider").slider("value", 10);
     }
 
     // Remove all tabs
