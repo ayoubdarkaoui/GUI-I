@@ -1,20 +1,35 @@
+<!--
+    File: index.html
+    GUI Assignment: Using the jQuery Plugin/UI Dynamic multiplication Table
+    Ayoub Darkaoui, UMass Lowell Computer Science, Ayoub_Darkaoui@student.uml.edu
+    All rights reserved. May be freely copied or excerpted for educational
+    purposes with credit to the author.
+    Updated by AD on June 17, 2021 at 6:30 PM
+-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GUI Programming I"/>
-    <meta name="author" content="Ayoub Darkaoui"/>
-    <title>Multiplicator Table V2</title>
-    <link href="css/style.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <meta name="description" content="GUI Programming I" />
+    <meta name="author" content="Ayoub Darkaoui" />
+    <title>Multiplication Table Generator v2</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <link href="../Hw3/css/style.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 </head>
+
 <body>
     <div id="wrapper">
+        <!-- website header title -->
         <header>
             <h1>GUI Programming I</h1>
         </header>
+
+        <!-- navigation bar -->
         <nav>
             <a href="../index.html">About</a>
             <div class="dropdown">
@@ -23,61 +38,92 @@
                     <a href="../Hw1/hw1.html">Homework 1</a>
                     <a href="../Hw2/index.html">Homework 2</a>
                     <a href="../Hw3/index.html">Homework 3</a>
-                    <a href="../Hw4/index.html">Homework 4</a>
+                    <a href="index.html">Homework 4</a>
                 </div>
             </div>
         </nav>
         <div class="line"></div>
+
+        <!-- main container for webpage content -->
         <main>
             <article>
-                <h2>Multiplicator Table V2</h2>
+                <h2>Multiplication Table Generator v2</h2>
+                <!-- get user input to generate the multiplication table -->
                 <fieldset>
-                    <legend>Please select table ranges [between -50 and 50]</legend>
-                    <form id="tableForm" action="#" method="GET">
-                        <label for="minXVal">Starting column value:</label>
-                        <input type="hidden" id="minXVal" value="1" min="-50" max="50"/>
-                        <div id="minXSlider"></div>
-                        <br/>
-                        <label for="maxXVal">Ending column value:</label>
-                        <input type="hidden" id="maxXVal" value="10" min="-50" max="50"/>
-                        <div id="maxXSlider"></div>
-                        <br/>
-                        <label for="minYVal">Starting row value:</label>
-                        <input type="hidden" id="minYVal" value="1" min="-50" max="50"/>
-                        <div id="minYSlider"></div>
-                        <br/>
-                        <label for="maxYVal">Ending row value:</label>
-                        <input type="hidden" id="maxYVal" value="10" min="-50" max="50"/>
-                        <div id="maxYSlider"></div>
-                        <input type="submit" id="generateButton" value="Generate Table"/>
+                    <legend>Please enter table ranges [-50 to 50]</legend>
+                    <form id="generateForm">
+                        <p>
+                            <label for="minXVal">Starting column value:</label>
+                            <input type="number" id="minX" value="1" min="-50"
+                                max="50" required />
+                        <div id="minXSlider" class="slider"></div>
+                        </p>
+                        <p>
+                            <label for="maxXVal">Ending column value:</label>
+                            <input type="number" id="maxX" value="10" min="-50"
+                                max="50" required />
+                        <div id="maxXSlider" class="slider"></div>
+                        </p>
+                        <p>
+                            <label for="minYVal">Starting row value:</label>
+                            <input type="number" id="minY" value="1" min="-50"
+                                max="50" required />
+                        <div id="minYSlider" class="slider"></div>
+                        </p>
+                        <p>
+                            <label for="maxYVal">Ending row value:</label>
+                            <input type="number" id="maxY" value="10" min="-50"
+                                max="50" required />
+                        <div id="maxYSlider" class="slider"></div>
+                        </p>
+                        <p>
+                            <input type="submit" id="saveButton"
+                                class="ui-button" value="Save Table" />
+                        </p>
                         <div id="info"></div>
                     </form>
                 </fieldset>
-                <div id="table">
+                <div id="dynamicTable">
+                    <!-- table is generated here -->
                 </div>
-                <div id="tabs">
-                    <ul></ul>
+                <div id="savedTables">
+                    <!-- saved tables are stored in tabs here -->
+                    <ul>
+                    </ul>
                 </div>
                 <div>
-                    <input type="button" id="removeTab" class="ui-button" value="Remove Tab" />
-                    <input type="button" id="resetButton" class="ui-button" value="Reset All Saved Tables" />
+                    <input type="button" id="removeTab" class="ui-button"
+                        value="Remove Tab" />
+                    <input type="button" id="resetButton" class="ui-button"
+                        value="Reset All Saved Tables" />
                 </div>
             </article>
         </main>
+
+        <!-- copyright info -->
         <footer>
+            <!-- Copyright information -->
             <span>Copyright &copy; 2024 Ayoub Darkaoui</span>
             <br />
             <p>
-                <a href="http://validator.w3.org/check?uri=https://ayoubdarkaoui.github.io/GUI-I/Hw3">
-                    <img class="img-square" src="../images/HTML5_Logo.png" style="height: 40px" alt="HTML5 Logo"> Valid HTML5 </a> &nbsp;&nbsp; 
-                <a href="http://jigsaw.w3.org/css-validator/validator?uri=https://ayoubdarkaoui.github.io/GUI-I/Hw3">
-                    <img class="img-square" src="../images/CSS3_Logo.png" style="height:40px" alt="CSS3 Logo"> Valid CSS3 </a>
+              <a href="http://validator.w3.org/check?uri=https://ayoubdarkaoui.github.io/GUI-I/Hw3">
+                <img class="img-square" src="../images/HTML5_Logo.png" style="height: 40px" alt="HTML5 Logo"> Valid HTML5 </a> &nbsp;&nbsp; 
+              <a href="http://jigsaw.w3.org/css-validator/validator?uri=https://ayoubdarkaoui.github.io/GUI-I/Hw3">
+                <img class="img-square" src="../images/CSS3_Logo.png" style="height:40px" alt="CSS3 Logo"> Valid CSS3 </a>
             </p>
-        </footer>
+          </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
-    <script src="dynamic_table_V2.js"></script>
+
+    <!-- javascript linked at the bottom of the body element -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="dynamic_table_v2.js"></script>
 </body>
+
 </html>
