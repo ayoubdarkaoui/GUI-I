@@ -1,102 +1,222 @@
 /***********************
-Assignment 4 File: style.css
-Assignment 4 Details: Using the jQuery Plugin/UI Dynamic multiplication Table
+Assignment 3 File: style.css
+Assignment 3 Details: Creating an intractive table using JavaScript
 Ayoub Darkaoui, UMass Lowell Computer Science Student, Ayoub_Darkaoui@student.uml.edu
 
 Copyright (c) 2024 by Ayoub Darkaoui. All rights reserved. May be freely copied or
 excerpted for educational purposes with credit to the author.
-updated by AD on June 17, 2024 at 9:23 PM
-***********************/
+updated by AD on June 3, 2024 at 9:23 PM
+*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
 
-/* Styling for fieldset elements */
+a {
+    color: rgb(10, 161, 175);
+    font-weight: bold;
+}
+a:hover {
+    color: rgb(11, 238, 238);
+}
+
+header h1 {
+    margin: 10px 6% 0px 6%;
+    line-height: 60px;
+    text-align: center;
+}
+
+/* navigation bar styles */
+nav {
+    margin: 0;
+    padding-left: 6%;
+    overflow: hidden;
+}
+nav a {
+    padding-right: 15px;
+    float: right;
+    color: #e7e9ee;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+/* dropdown menu */
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+    margin: 0;
+    padding: 0;
+    padding-right: 15px;
+    border: none;
+    outline: none;
+    color: #f1e7e7;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: large;
+    font-weight: bold;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border: 1px solid #f6f6f65f;
+    border-radius: 5px;
+    background-color: rgb(19, 125, 125);
+    min-width: 160px;
+    box-shadow: 2px 2px 2px 1px rgb(13, 12, 12);
+    z-index: 3;
+}
+.dropdown-content a {
+    padding: 3px 16px;
+    float: none;
+    display: block;
+    color: #ebf2f3;
+    text-decoration: none;
+    text-align: left;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* navbar underline */
+div.line {
+    margin: 0 4%;
+    height: 4px;
+    width: 95%;
+    background-color: #f6f1f1d5;
+}
+
+/* main content block */
+main {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+article {
+    margin: 20px 6% 10px 6%;
+    overflow: hidden;
+    color: #fffdfd;  
+}
+article p {
+    line-height: 1.4em;
+}
+article img {
+    height: auto;
+    max-width: 100%;
+}
+
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
+    margin-top:0;
+    padding: 10px 0;
+}
+footer p {
+    margin: 5px;
+}
+footer span {
+    margin: 1px;
+    line-height: 16px;
+}
+
+/* Additional styles for the table */
 fieldset {
-    margin: 0px 10px 10px 10px; /* Margin around fieldset */
-    padding: 10px; /* Padding inside fieldset */
-    width: 500px; /* Fixed width of fieldset */
-    float: left; /* Floats fieldset to the left */
-    font-size: medium; /* Font size for text inside fieldset */
-    text-align: left; /* Text alignment inside fieldset */
-    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    border: 2px solid #f6f1f1d5;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
 }
 
-/* Styling for paragraph elements inside fieldset */
-fieldset p {
-    margin: 10px 0px; /* Margin around paragraphs */
+legend {
+    color: #f3ebeb;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
-/* Styling for label and input elements inside fieldset */
-fieldset label, fieldset input {
-    padding: 5px; /* Padding around labels and inputs */
+label {
+    display: inline-block;
+    width: 200px;
+    margin: 5px 0;
 }
 
-/* Styling for submit input elements inside fieldset */
-fieldset input[type="submit"] {
-    margin: 5px 25% 0px 25%; /* Margin around submit button */
-    width: 50%; /* Width of submit button */
+input[type="number"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-/* Styling for the info section inside fieldset */
-fieldset #info {
-    margin: 5px; /* Margin around info section */
-    max-width: 300px; /* Maximum width of info section */
-    text-align: center; /* Center text alignment */
-    font-weight: bold; /* Bold font weight */
+input[type="button"],
+input[type="submit"] {
+    background-color: #0aa1af;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-/* Styling for the dynamic multiplication table container */
-#dynamicTable {
-    margin: 10px; /* Margin around the dynamic table */
-    max-width: 1200px; /* Maximum width of the dynamic table container */
-    max-height: 500px; /* Maximum height of the dynamic table container */
-    overflow: auto; /* Adds scroll bars if content overflows */
-    border: 1px solid white; /* White border around the table container */
-    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background-color: #0beeee;
 }
 
-/* Media query for screens with a maximum width of 767px */
-@media only screen and (max-width: 767px) {
-    #dynamicTable {
-        clear: both; /* Clears floating elements */
-        min-width: 100%; /* Minimum width of the dynamic table container */
-    }
-}
-
-/* Styling for the table container */
+/* Styles for the multiplication table */
 #table {
-    width: 100%; /* Full width for the table container */
-    overflow: auto; /* Adds scroll bars if content overflows */
-    margin-top: 20px; /* Top margin for the table container */
-    position: relative; /* Relative positioning */
-    
+    width: 100%;
+    overflow: auto;
+    margin-top: 20px;
+    position: relative;
 }
 
-/* Styling for non-empty th elements */
-table th:not(:empty) {
-    padding: 0px 10px; /* Padding around table headers */
-    color: white; /* White text color for table headers */
-    background-color: #0aa1af; /* Background color for table headers */
-    border: 1px solid #100f0f; /* White border around table headers */
+#table table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-/* Styling for table td elements */
-table td {
-    padding: 0px 10px; /* Padding around table cells */
-    border-bottom: 1px solid black; /* Bottom border for table cells */
-    border-right: 1px solid black; /* Right border for table cells */
+#table th,
+#table td {
+    border: 1px solid #fff;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #f3ebeb;
+    position: relative;
 }
 
-/* Styling for all th elements */
 #table th {
-    background-color: #0aa1af; /* Background color for all table headers */
-    color: #fff; /* White text color for all table headers */
+    background-color: #0aa1af; /* Blue background for starting values */
+    color: #fff; /* White text */
 }
 
-/* Styling for error messages */
-.error {
-    color: red; /* Red text color for error messages */
+#table th:first-child,
+#table td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #0aa1af;
 }
 
-/* Styling for the saved tables section */
-#savedTables {
-    clear: both; /* Clears floating elements */
+#table th {
+    position: sticky;
+    top: 0;
+}
+
+#info {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #ff6f61;
 }
