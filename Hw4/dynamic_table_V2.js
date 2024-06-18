@@ -7,7 +7,8 @@ Copyright (c) 2024 by Ayoub Darkaoui. All rights reserved. May be freely copied 
 excerpted for educational purposes with credit to the author.
 updated by AD on June 17, 2024 at 9:23 PM
 */
-// store HTML elements as variables
+
+// Store HTML elements as variables
 var dynamicTable = document.getElementById("dynamicTable");
 var infoMsg = document.getElementById("info");
 var minX = document.getElementById("minX");
@@ -16,50 +17,52 @@ var minY = document.getElementById("minY");
 var maxY = document.getElementById("maxY");
 var minXVal, maxXVal, minYVal, maxYVal;
 
-/* generateTable makes sure each value is valid and begins inserting the HTML
-elements necessary to create the columns and rows for a multiplication table.
+/* 
+generateTable ensures each value is valid and begins inserting the HTML elements
+necessary to create the columns and rows for a multiplication table.
 The table data is calculated and filled in during the insertion of the rows.
-Returns true if successful, otherwise returns false. */
+Returns true if successful, otherwise returns false.
+*/
 function generateTable() {
     let temp = 0;
     let rowString = "";
 
-    // if values are not valid then do nothing and return false
+    // If values are not valid, do nothing and return false
     if (!checkValues()) { return false; }
 
-    if (minXVal > maxXVal) {    // swap min and max column values
+    // Swap min and max column values if necessary
+    if (minXVal > maxXVal) {
         temp = minXVal;
         minXVal = maxXVal;
         maxXVal = temp;
         infoMsg.textContent = "Swapping starting and ending column value. ";
-    }
-    else {
+    } else {
         infoMsg.textContent = "";
     }
-    if (minYVal > maxYVal) {    // swap min and max row values
+
+    // Swap min and max row values if necessary
+    if (minYVal > maxYVal) {
         temp = minYVal;
         minYVal = maxYVal;
         maxYVal = temp;
         infoMsg.textContent += "Swapping starting and ending row value.";
-    }
-    else {
+    } else {
         infoMsg.textContent += "";
     }
 
-    // insert empty table HTML
-    dynamicTable.innerHTML = "<table><thead><tr " +
-        "id=\"columns\"></tr></thead><tbody id=\"rows\"></tbody></table>";
+    // Insert empty table HTML
+    dynamicTable.innerHTML = "<table><thead><tr id=\"columns\"></tr></thead><tbody id=\"rows\"></tbody></table>";
 
     let columns = document.getElementById("columns");
     let rows = document.getElementById("rows");
 
-    // fill in columns
+    // Fill in columns
     columns.innerHTML = "<th></th>";
     for (let i = minXVal; i <= maxXVal; i++) {
         columns.innerHTML += "<th>" + i + "</th>";
     }
 
-    // fill in rows with multiplication data
+    // Fill in rows with multiplication data
     for (let i = minYVal; i <= maxYVal; i++) {
         rowString += "<tr><th>" + i + "</th>";
         for (let j = minXVal; j <= maxXVal; j++) {
@@ -72,23 +75,26 @@ function generateTable() {
     return true;
 }
 
-/* checkValues checks the user input form values and returns true if they are
+/*
+checkValues checks the user input form values and returns true if they are
 within range of -50 to 50, otherwise it displays an error message within the
-fieldset and returns false */
+fieldset and returns false.
+*/
 function checkValues() {
     minXVal = parseInt(minX.value);
     maxXVal = parseInt(maxX.value);
     minYVal = parseInt(minY.value);
     maxYVal = parseInt(maxY.value);
 
-    if (minXVal < -50 || minXVal > 50 || isNaN(minXVal) || maxXVal < -50 ||
-        maxXVal > 50 || isNaN(maxXVal) || minYVal < -50 || minYVal > 50 ||
-        isNaN(minYVal) || maxYVal < -50 || maxYVal > 50 || isNaN(maxYVal)) {
-        infoMsg.textContent = "One or more values is not within range of -50 to"
-            + " 50";
+    // Validate the range of input values
+    if (minXVal < -50 || minXVal > 50 || isNaN(minXVal) || 
+        maxXVal < -50 || maxXVal > 50 || isNaN(maxXVal) || 
+        minYVal < -50 || minYVal > 50 || isNaN(minYVal) || 
+        maxYVal < -50 || maxYVal > 50 || isNaN(maxYVal)) {
+        
+        infoMsg.textContent = "One or more values is not within range of -50 to 50";
         return false;
-    }
-    else {
+    } else {
         infoMsg.textContent = "";
         return true;
     }
@@ -96,36 +102,36 @@ function checkValues() {
 
 // jQuery events and validation
 $(document).ready(function () {
-    var tabs = $("#savedTables").tabs();    // saved table tabs
+    var tabs = $("#savedTables").tabs(); // Initialize saved table tabs
     var ul = tabs.find("ul");
     var removeButton = $("#removeTab");
     var resetButton = $("#resetButton");
     var tabCount = 0;
     var tabStr = "";
 
+    // Hide tabs and buttons initially
     tabs.hide();
     removeButton.hide();
     resetButton.hide();
     generateTable();
 
-    // save table / submit form event
+    // Save table / submit form event
     $("#generateForm").submit(function (event) {
-        event.preventDefault();     // prevent redirection on form submit
-        if (generateTable()) {      // make sure values are valid
+        event.preventDefault(); // Prevent redirection on form submit
+
+        if (generateTable()) { // Ensure values are valid
             tabs.show();
             removeButton.show();
             resetButton.show();
 
-            // tab info strings
-            tabStr = $(minX).val() + " – " + $(maxX).val() + " x " +
-                $(minY).val() + " – " + $(maxY).val();
+            // Tab info strings
+            tabStr = $(minX).val() + " – " + $(maxX).val() + " x " + $(minY).val() + " – " + $(maxY).val();
 
-            // add new tab
-            $("<li><a href=\"#tab" + tabCount + "\">" + tabStr +
-                "</a></li>").appendTo(ul);
+            // Add new tab
+            $("<li><a href=\"#tab" + tabCount + "\">" + tabStr + "</a></li>").appendTo(ul);
             $("<div id=\"tab" + tabCount + "\"></div>").appendTo(tabs);
 
-            // clone table HTML into new tab
+            // Clone table HTML into new tab
             $("#dynamicTable").clone().appendTo("#tab" + tabCount);
             tabs.tabs("refresh");
             tabs.tabs({
@@ -135,23 +141,22 @@ $(document).ready(function () {
         }
     });
 
-    // remove individual tab
+    // Remove individual tab
     removeButton.click(function () {
         let tabId = tabs.tabs("option", "active");
         $("#tab" + tabId).remove();
         $("a[href=\"#tab" + tabId + "\"]").closest("li").remove();
 
-        // decrement each existing tab after a remove tab
+        // Decrement each existing tab after a removed tab
         for (tabId; tabId < tabCount - 1; tabId++) {
             $("#tab" + (tabId + 1)).attr("id", "tab" + tabId);
-            $("a[href=\"#tab" + (tabId + 1) + "\"]").attr("href", "#tab" +
-                tabId);
+            $("a[href=\"#tab" + (tabId + 1) + "\"]").attr("href", "#tab" + tabId);
         }
         tabs.tabs("refresh");
         tabCount--;
     });
 
-    // reset all saved table tabs
+    // Reset all saved table tabs
     resetButton.click(function () {
         $("#savedTables").find("div").remove();
         ul.empty();
@@ -161,7 +166,7 @@ $(document).ready(function () {
         resetButton.hide();
     });
 
-    // form validation
+    // Form validation
     $("#generateForm").validate({
         errorElement: "div",
         errorPlacement: function (error, element) {
@@ -179,13 +184,12 @@ $(document).ready(function () {
                     error.insertAfter("#maxYSlider");
                     break;
                 default:
-                    console.log(
-                        "validate(errorPlacement()): unknown element id");
+                    console.log("validate(errorPlacement()): unknown element id");
             }
         }
     });
 
-    // custom error messages for invalid number input
+    // Custom error messages for invalid number input
     $("input[type=\"number\"]").rules("add", {
         required: true,
         min: -50,
@@ -197,7 +201,7 @@ $(document).ready(function () {
         }
     });
 
-    // global slider properties
+    // Global slider properties
     var sliderOpts = {
         min: -50,
         max: 50,
@@ -205,8 +209,10 @@ $(document).ready(function () {
         value: 0
     }
 
-    /* setup two-way binding on each slider and input, generateTable() is
-    called dynamically on either a slide or number input event */
+    /* 
+    Setup two-way binding on each slider and input, generateTable() is called 
+    dynamically on either a slide or number input event 
+    */
     $("#minXSlider").slider(sliderOpts, {
         slide: function (event, ui) {
             $(minX).val(ui.value);

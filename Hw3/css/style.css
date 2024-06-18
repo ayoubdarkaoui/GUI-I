@@ -113,10 +113,7 @@ article img {
     height: auto;
     max-width: 100%;
 }
-/* Putting the GitHub Card in the center*/
-.center_text_images {
-    text-align: center;
-}
+
 
 footer {
     position: relative;
