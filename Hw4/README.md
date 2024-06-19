@@ -1,4 +1,4 @@
-# Assignment 3: Creating an intractive table using Java Script
+# Assignment 4: Upgrading the multiplication table using JQuery UI sliders
 
 ## Name: Ayoub Darkaoui
 ## Email: Ayoub_Darkaoui@student.uml.edu
