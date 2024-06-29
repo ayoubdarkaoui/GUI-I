@@ -1,0 +1,145 @@
+<!--
+    File: scrabble.js
+    GUI Assignment 5: Implementing one line Scrabble Game Board
+    Ayoub Darkaoui, UMass Lowell Computer Science, Ayoub_Darkaoui@student.uml.edu
+    All rights reserved. May be freely copied or excerpted for educational
+    purposes with credit to the author.
+    Updated by AD on June 28, 2021 at 11:30 PM
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GUI Programming I" /> <!-- Description of the webpage -->
+    <meta name="author" content="Ayoub Darkaoui" /> <!-- Author information -->
+
+    <!-- Title of the webpage -->
+    <title>Scrabble Game</title>
+
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Scripts for jQuery and jQuery UI -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- Custom JavaScript for Scrabble game -->
+    <script src="js/scrabble.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- Header section -->
+        <header>
+            <h1>GUI Programming I</h1> <!-- Main heading -->
+        </header>
+
+        <!-- Navigation section -->
+        <nav>
+            <a href="/index.html">About</a> <!-- About link -->
+            <!-- Dropdown menu for homework links -->
+            <div class="dropdown">
+                <button class="dropbtn">Homework</button> <!-- Dropdown button -->
+                <div class="dropdown-content">
+                    <!-- Homework links -->
+                    <a href="/Hw1/hw1.html">Homework 1</a>
+                    <a href="/Hw2/index.html">Homework 2</a>
+                    <a href="/Hw3/index.html">Homework 3</a>
+                    <a href="/Hw4/index.html">Homework 4</a>
+                    <a href="index.html">Homework 5</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="line"></div> <!-- Horizontal line divider -->
+
+        <!-- Main content section -->
+        <div id="gameContainer">
+            <main>
+                <article>
+                    <!-- Title for the Scrabble game -->
+                    <h2>Scrabble Game</h2>
+
+                    <!-- Scrabble board container -->
+                    <div id="scrabbleBoardContainer">
+                        <img id="boardBackground" src="graphics_data/Scrabble_Board_OneLine.png"
+                            alt="Scrabble Board Background"> <!-- Image for Scrabble board -->
+                        <div id="scrabbleBoard"></div> <!-- Placeholder for Scrabble board tiles -->
+                    </div>
+
+                    <!-- Tile rack container -->
+                    <div id="rackTilesContainer">
+                        <img id="tileRackBackground" src="graphics_data/scrabble-tile-holder-406774_640.png"
+                            alt="Tile Rack Background"> <!-- Image for tile rack -->
+                        <div id="rackTiles"></div> <!-- Placeholder for tile rack tiles -->
+                    </div>
+
+                    <!-- Game controls -->
+                    <div id="controls">
+                        <button id="submitWord">Submit Word</button> <!-- Button to submit word -->
+                        <button id="resetBoard">Reset Board</button> <!-- Button to reset board -->
+                        <button id="newTiles">New Tiles</button> <!-- Button to get new tiles -->
+                    </div>
+
+                    <!-- Current score display -->
+                    <div id="score">Current Score: <span id="currentScore">0</span></div>
+
+                    <!-- Validation message display -->
+                    <div id="validationMessage"></div>
+
+                    <!-- Table to display submitted words -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Submitted Words</th>
+                                <th>Valid</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="submittedWords"></tbody>
+                    </table>
+
+                    <!-- Game summary table -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Valid Words</th>
+                                <th>Invalid Words</th>
+                                <th>Total Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="gameSummary">
+                            <tr>
+                                <td>0</td> <!-- Initial count of valid words -->
+                                <td>0</td> <!-- Initial count of invalid words -->
+                                <td>0</td> <!-- Initial total score -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </main>
+
+            <!-- Footer section -->
+            <footer>
+                <span>Copyright &copy; 2024 Ayoub Darkaoui</span> <!-- Copyright information -->
+                <br />
+                <!-- Validation links for HTML5 and CSS3 -->
+                <p>
+                    <a href="http://validator.w3.org/check?uri=https://ayoubdarkaoui.github.io/GUI-I/Hw5">
+                        <img class="img-square" src="../images/HTML5_Logo.png" style="height: 40px"
+                            alt="HTML5 Logo"> Valid HTML5 </a>
+                    &nbsp;&nbsp;
+                    <a href="http://jigsaw.w3.org/css-validator/validator?uri=https://ayoubdarkaoui.github.io/GUI-I/Hw5">
+                        <img class="img-square" src="../images/CSS3_Logo.png" style="height:40px"
+                            alt="CSS3 Logo"> Valid CSS3 </a>
+                </p>
+            </footer>
+        </div>
+    </div> <!-- End of wrapper -->
+</body>
+
+</html>
